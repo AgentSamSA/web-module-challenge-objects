@@ -98,10 +98,8 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
-
-
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -113,8 +111,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(reviewArray, reviewIndex) {
+  return `${reviewArray[reviewIndex].name} gave the restaurant a ${reviewArray[reviewIndex].rating} star review, and their feedback was: ${reviewArray[reviewIndex].feedback}`;
 }
 
 
@@ -131,8 +129,8 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(reviewArray) {
+  return `${reviewArray[reviewArray.length - 1].name} gave the restaurant a ${reviewArray[reviewArray.length - 1].rating} star review, and their feedback was: ${reviewArray[reviewArray.length - 1].feedback}`;
 } 
 
 

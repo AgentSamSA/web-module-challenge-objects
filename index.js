@@ -50,8 +50,9 @@ export const burger = {
   name: "Burger",
   price: 18,
   category: "Lunch",
+  discountCustomers: ["teacher", "student"],
   discount: function (string) {
-    if (string === "teacher" || string === "student") {
+    if (this.discountCustomers.includes(string)) {
       return burger.price * .75;
     } else {
       return burger.price * .9;
@@ -130,7 +131,9 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(reviewArray) {
-  return `${reviewArray[reviewArray.length - 1].name} gave the restaurant a ${reviewArray[reviewArray.length - 1].rating} star review, and their feedback was: ${reviewArray[reviewArray.length - 1].feedback}`;
+  const lastIndex = reviewArray.length - 1;
+  return getReviewByIndex(reviewArray, lastIndex);
+  ;
 }
 
 
